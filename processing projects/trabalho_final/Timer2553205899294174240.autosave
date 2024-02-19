@@ -1,0 +1,23 @@
+class Timer{
+
+  int time;
+  int framespersecond;
+
+  Timer(){
+    framespersecond = (int)frameRate;//transformando em int aqui para n'ao ter que castar todo frame
+    time = 0;
+  }
+  
+  void update(){
+    time++;
+  }
+
+  void display(){
+    //float minutes = time/framesperminute;
+    int seconds = time/framespersecond;
+    println(seconds/60,":", seconds%60);
+    //println(time/frameRate);
+  }
+
+
+}
